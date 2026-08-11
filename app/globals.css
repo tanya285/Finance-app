@@ -128,3 +128,27 @@
     @apply font-sans;
   }
 }
+
+  
+@utility gradient {
+  @apply bg-gradient-to-br from-blue-600 to-purple-600;
+}
+
+@utility gradient-title {
+  @apply font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-purple-600;
+}
+
+@utility hero-image-wrapper {
+  perspective: 1000px;
+}
+
+@utility hero-image{
+  transform: rotateX(15deg) scale(1);
+  transition: transform 0.5s ease-out;
+  will-change: tranform;
+}
+
+@utility hero-image-scrolled{
+  transform: rotateX(0deg) scale(1) translateY(40);
+}
+
