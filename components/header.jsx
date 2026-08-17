@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { checkUser } from "@/lib/checkUser";
 import {
   Show,
   SignInButton,
@@ -9,7 +10,8 @@ import {
 } from "@clerk/nextjs";
 import { LayoutDashboard, PenBox } from "lucide-react";
 
-const Header = () => {
+const Header = async () => {
+  await checkUser();
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
